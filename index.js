@@ -1,4 +1,4 @@
-let channel = 'g-d-k-o';
+let channel = '/gd-ko';
 let makeURL = (per, page) => `https://api.are.na/v2/channels/${channel}?per=${per}&page=${page}`;
 
 // Get metadata
@@ -49,14 +49,30 @@ function makeEntry(entry) {
     entryLi.querySelector('.description').innerHTML = entry.content_html;
   }
 
+  if (entryClass == 'Link') {
+    entryLi.querySelector('a').href = entry.image.original.url;
+    entryLi.querySelector('img').src = entry.image.display.url;
+    entryLi.querySelector('.title').innerHTML = entry.title;
+    entryLi.querySelector('.title').innerHTML = entry.title;
+    entryLi.querySelector('.description').innerHTML = entry.description_html;
+  } else if (entryClass == 'Media') {
+    entryLi.querySelector('a').href = entry.image.original.url;
+    entryLi.querySelector('img').src = entry.image.display.url;
+    entryLi.querySelector('.title').innerHTML = entry.title;
+    entryLi.querySelector('.title').innerHTML = entry.title;
+    entryLi.querySelector('.description').innerHTML = entry.description_html;
+  }
+
   let entriesEl = document.getElementById('entries');
   entriesEl.insertBefore(entryEl, entriesEl.firstChild);
 }
 
+
+
 // THE TIMER
 window.onload = function() {
   // Month Day, Year Hour:Minute:Second, id-of-element-container
-  countUpFromTime("Apr 1, 2020 12:00:00", 'countup1'); // ****** Change this line!
+  countUpFromTime("Apr 11, 2020 12:00:00", 'countup1'); // ****** Change this line!
 };
 function countUpFromTime(countFrom, id) {
   countFrom = new Date(countFrom).getTime();
