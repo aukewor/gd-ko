@@ -1,0 +1,67 @@
+/* RESET */
+*,
+*:after,
+*:before{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; /* Now 10px = 1rem! */
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: Arial, sans-serif;
+  margin: 40px;
+  color: red;
+}
+
+h1 {
+  color: red;
+  text-align: center;
+  font-weight: normal;
+  font-size: 2rem;
+}
+
+ul {
+  list-style-type: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.logo {
+  width: 45vh;
+  margin-top: -10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.counter,.countup {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 2vw;
+  margin-bottom: 3vw;
+}
+
+#entries {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.entry {
+  width: 300px;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.title {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
